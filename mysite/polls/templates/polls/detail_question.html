@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+    {% if qs %}
+    <h1>{{ qs.question_text }}</h1>
+    <form action="">
+        <ul>
+        {% for item in qs.choice_set.all %}
+    <li><input type="radio" value="{{ item.id }}" name="choice"> {{item.choice_text}} </li>
+        {% endfor %}
+            <p> <input type="submit" value="gửi"> </p>
+        </ul>
+    </form>
+    {% endif %}
+{% endblock %}

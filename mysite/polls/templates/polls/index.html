@@ -1,0 +1,12 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+<h1>Đây là templates</h1>
+<p>Mình tên là {{name}} xin chào các bạn !!!</p>
+<h2>tôi chỉ có ngầm này đồ vật của bản thân để chứng tỏ tôi nghèo :))</h2>
+<ol>
+    {% for item in tien %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ol>
+<p>Bạn có muốn tham gia một cuộc khảo sát của chúng tôi ? Nếu muốn ban hay truy cập <a href="{% url 'view_list' %}"><strong>tại đây.</strong></a></p>
+{% endblock %}

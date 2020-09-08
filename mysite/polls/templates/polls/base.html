@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="header">
+        <h1>My website</h1>
+        <style>
+        .header{
+            padding: 30px;
+            background-color: #255;
+            color: #000;
+        }
+        .menu{
+            background-color: #234;
+            color: #FFF;
+        }
+        .menu ul li {
+            float: left;
+            padding: 6px 7px;
+        }
+        .menu ul li:hover{
+        background-color: #255;
+            color: #FFF;
+        }
+        .menu ul {
+            list-style-type: none;
+        }
+        .menu:after{
+            clear: both;
+            display:table;
+            content: "";
+        }
+        </style>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>link 1</li>
+            <li>link 2</li>
+            <li>link 3</li>
+            <li>link 4</li>
+        </ul>
+    </div>
+    <div class="noidung">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
